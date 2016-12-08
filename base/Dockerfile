@@ -13,5 +13,5 @@ RUN bash $METEORD_DIR/lib/install_node.sh
 RUN bash $METEORD_DIR/lib/install_phantomjs.sh
 RUN bash $METEORD_DIR/lib/cleanup.sh
 
-EXPOSE 80
+EXPOSE 80 4000
 ENTRYPOINT bash $METEORD_DIR/run_app.sh
