@@ -14,8 +14,8 @@ RUN bash $METEORD_DIR/lib/install_phantomjs.sh
 RUN bash $METEORD_DIR/lib/cleanup.sh
 
 RUN \
-  apt-get install tzdata \
-  echo "Asia/Manila" > /etc/timezone \
+  apt-get install tzdata && \
+  echo "Asia/Manila" > /etc/timezone && \
   dpkg-reconfigure -f noninteractive tzdata
 
 EXPOSE 80 4000
